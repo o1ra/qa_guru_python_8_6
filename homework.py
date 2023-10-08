@@ -85,6 +85,7 @@ def best_name(function_name, *args):
     res = f"{func_name} [{', '.join(args)}]"
     print(res)
 
+
 def test_readable_function():
     open_browser(browser_name="Chrome")
     go_to_companyname_homepage(page_url="https://companyname.com")
