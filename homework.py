@@ -84,6 +84,7 @@ def best_name(function_name, *args):
     func_name = function_name.__name__.replace('_', ' ').capitalize()
     res = f"{func_name} [{', '.join(args)}]"
     print(res)
+
 def test_readable_function():
     open_browser(browser_name="Chrome")
     go_to_companyname_homepage(page_url="https://companyname.com")
@@ -92,14 +93,14 @@ def test_readable_function():
 
 def open_browser(browser_name):
     actual_result = best_name(open_browser(), browser_name)
-    assert actual_result == "Open Browser [Chrome]"
+    assert actual_result == "Open browser [Chrome]"
 
 
 def go_to_companyname_homepage(page_url):
     actual_result = best_name(go_to_companyname_homepage(), page_url)
-    assert actual_result == "Go To Companyname Homepage [https://companyname.com]"
+    assert actual_result == "Go to companyname homepage [https://companyname.com]"
 
 
 def find_registration_button_on_login_page(page_url, button_text):
     actual_result = best_name(find_registration_button_on_login_page(), page_url, button_text)
-    assert actual_result == "Find Registration Button On Login Page [https://companyname.com/login, Register]"
+    assert actual_result == "Find registration button on login page [https://companyname.com/login, Register]"
