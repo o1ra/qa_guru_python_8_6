@@ -82,6 +82,7 @@ def test_find_suitable_user():
 def best_name(function_name, *args):
     func_name = function_name.__name__.replace('_', ' ').capitalize()
     res = f"{func_name} [{', '.join(args)}]"
+    print(res)
     return res
 
 def test_readable_function():
